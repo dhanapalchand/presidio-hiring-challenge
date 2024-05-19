@@ -74,17 +74,17 @@ const UserLandDetails = () => {
         <div>
             <h2>User Land Details</h2>
             {userData && userData.length > 0 ? (
-                <table className="table">
+                <table class="table">
                     <thead>
                         <tr>
-                            <th>Place</th>
-                            <th>Area</th>
-                            <th>Bedrooms</th>
-                            <th>Bathrooms</th>
-                            <th>Nearby Hospitals</th>
-                            <th>Nearby Colleges</th>
-                            <th>Price</th>
-                            <th>Actions</th>
+                            <th scope="col">Place</th>
+                            <th scope="col">Area</th>
+                            <th scope="col">Bedrooms</th>
+                            <th scope="col">Bathrooms</th>
+                            <th scope="col">Nearby Hospitals</th>
+                            <th scope="col">Nearby Colleges</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Actions</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -113,7 +113,7 @@ const UserLandDetails = () => {
             type="button"
             className="btn btn-primary rounded-1 p-2 px-4 mb-4"
             onClick={handlePostJobClick}
-            style={buttonStyle}
+            //style={buttonStyle}
         >
             <span>Add Land</span>
         </button>

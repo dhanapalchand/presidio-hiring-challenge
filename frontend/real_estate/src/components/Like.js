@@ -61,15 +61,15 @@ const Like = () => {
   return (
     <div>
       <h2>User Likes</h2>
-      <table className="table">
+      <table class="table">
         <thead>
           <tr>
-            <th>Place</th>
-            <th>Area</th>
-            <th>Bedrooms</th>
-            <th>Bathrooms</th>
-            <th>Price</th>
-            <th>Action</th>
+            <th scope="col">Place</th>
+            <th scope="col">Area</th>
+            <th scope="col">Bedrooms</th>
+            <th scope="col">Bathrooms</th>
+            <th scope="col">Price</th>
+            <th scope="col">Action</th>
           </tr>
         </thead>
         <tbody>

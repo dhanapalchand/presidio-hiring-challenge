@@ -2,6 +2,8 @@ import React, { useState, useContext } from "react";
 import { authContext } from '../hooks/authContext'; 
 import axios from 'axios';
 import { useNavigate } from "react-router-dom";
+import { API_URL } from "./env";
+
 
 const LandDetails = () => {
   const navigate = useNavigate();
@@ -23,7 +25,7 @@ const LandDetails = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        'http://localhost:8000/post_land',
+        `${API_URL}/post_land`,
         {
           user: userId,
           place,
