@@ -33,7 +33,11 @@ const landDetailsSchema = new mongoose.Schema({
   price: {
     type: Number,
     required: true
-  }
+  },
+    imgUrl: {
+    type: String,
+    
+  },
 });
 
 const LandDetails = mongoose.model('LandDetails', landDetailsSchema);

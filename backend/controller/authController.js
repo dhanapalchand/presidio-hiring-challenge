@@ -29,7 +29,9 @@ const signup = async (req, res) => {
   const city = req.body.city;
   const state = req.body.state;
   const pincode = req.body.pincode;
+  const address = req.body.address;
   const country = req.body.country;
+  const role=req.body.role;
 
   try {
     const user = await User.signup(
@@ -42,6 +44,8 @@ const signup = async (req, res) => {
       city,
       state,
       country,
+      role,
+      address,
     );
 
     const token = createToken(user._id);

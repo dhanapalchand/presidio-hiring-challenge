@@ -33,4 +33,12 @@ app.get("/", async (req, res) => {
 
 mongoose
   .connect(process.env.MONGOOSE_CONNECTION_URI)
-  .then(app.listen(process.env.PORT || 8080));
+  .then(() => {
+    const port = process.env.PORT || 8080;
+    app.listen(port, () => {
+      console.log(`Server is listening on port ${port}`);
+    });
+  })
+  .catch(err => {
+    console.error('Failed to connect to MongoDB', err);
+  });

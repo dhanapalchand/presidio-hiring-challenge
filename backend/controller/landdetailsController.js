@@ -12,7 +12,7 @@ const getLand = async (req, res) => {
 
 // Controller function to add new land details
 const addLand = async (req, res) => {
-  const { place, area, numberOfBedrooms, numberOfBathrooms, nearbyHospitals, nearbyColleges, price } = req.body;
+  const { place, area, numberOfBedrooms, numberOfBathrooms, nearbyHospitals, nearbyColleges, price,imgUrl } = req.body;
   const userId = req.user._id; // Assuming the user ID is available in req.user
 
   try {
@@ -24,7 +24,8 @@ const addLand = async (req, res) => {
       numberOfBathrooms,
       nearbyHospitals,
       nearbyColleges,
-      price
+      price,
+      imgUrl
     });
 
     const savedLand = await newLand.save();
@@ -66,7 +67,7 @@ const getLandById = async (req, res) => {
 // Controller function to update land details
 const updateLand = async (req, res) => {
   const id = req.params.id;
-  const { place, area, numberOfBedrooms, numberOfBathrooms, nearbyHospitals, nearbyColleges, price } = req.body;
+  const { place, area, numberOfBedrooms, numberOfBathrooms, nearbyHospitals, nearbyColleges, price,imgUrl } = req.body;
 
   try {
     const updatedLand = await LandDetails.findByIdAndUpdate(id, {
@@ -76,7 +77,8 @@ const updateLand = async (req, res) => {
       numberOfBathrooms,
       nearbyHospitals,
       nearbyColleges,
-      price
+      price,
+      imgUrl
     }, { new: true });
 
     if (!updatedLand) {

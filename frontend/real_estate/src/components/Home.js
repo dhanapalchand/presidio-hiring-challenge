@@ -12,6 +12,7 @@ const Home = () => {
     const [priceFilter, setPriceFilter] = useState('');
     const [areaFilter, setAreaFilter] = useState('');
     const [likeData, setLikeData] = useState([]);
+    
     const { user } = useContext(authContext);
     const usertoken = user.token;
 

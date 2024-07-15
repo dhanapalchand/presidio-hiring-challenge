@@ -1,4 +1,4 @@
-const Like = require('../models/likeModel.js');
+  const Like = require('../models/likeModel.js');
 
 // Like a land
 

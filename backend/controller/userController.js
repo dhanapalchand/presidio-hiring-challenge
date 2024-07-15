@@ -15,6 +15,5 @@ const getOneUserById = async (req, res) => {
   };
 
   module.exports = {
-   
     getOneUserById
   };

@@ -41,6 +41,14 @@ const userSchema = new mongoose.Schema({
     type: String,
     default: null,
   },
+  role: {
+    type: String,
+    default: null,
+  },
+  address: {
+    type: String,
+    default: null,
+  },
 
 });
 
@@ -54,7 +62,9 @@ userSchema.statics.signup = async function (
   pincode,
   city,
   state,
-  country
+  country,
+  role,
+  address
 
 ) {
   const existingUser = await this.findOne({ email });
@@ -75,6 +85,9 @@ userSchema.statics.signup = async function (
       city,
       state,
       country,
+      role,
+      address,
+     
     });
 
     return user;
