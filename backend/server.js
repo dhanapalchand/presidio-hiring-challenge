@@ -10,6 +10,7 @@ const LandRoutes = require("./routes/landDetailsRoutes.js");
 const userRoutes = require("./routes/userDetailsRoutes.js");
 const likeRoutes = require("./routes/likeRoutes.js");
 const interestRoutes = require("./routes/interestRoutes.js");
+const serviceRoutes=require("./routes/service.js");
 
 
 const app = express();
@@ -26,6 +27,8 @@ app.use(LandRoutes);
 app.use(userRoutes);
 app.use(likeRoutes);
 app.use(interestRoutes);
+app.use(serviceRoutes);
+
 
 app.get("/", async (req, res) => {
   res.send("Hello World");
